@@ -5,10 +5,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>test</title>
+        <title>at Tattoo Homepage</title>
       </Head>
       
-      HELLO
+      <div className="bg-black text-white">
+        this is test content styled by tailwindcss
+      </div>
     </>
   )
 }
