@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>at Tattoo Homepage</title>
       </Head>
-      
+
       <div className="bg-black text-white">
         this is test content styled by tailwindcss
       </div>
