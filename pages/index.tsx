@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
@@ -8,9 +9,9 @@ export default function Home() {
         <title>at Tattoo Homepage</title>
       </Head>
 
-      <div className="bg-black text-white">
-        this is test content styled by tailwindcss
-      </div>
+      <Header />
+
+      <div className="h-screen"></div>
     </>
-  )
+  );
 }
