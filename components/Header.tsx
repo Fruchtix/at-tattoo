@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <div className="flex justify-between items-center sticky top-0 bg-white">
-      <div className="w-1/3 relative m-2 sm:w-1/12">
+      <div className="w-1/3 relative m-2 z-20 sm:w-1/12">
         <Image
           src="/../public/svgs/at-tattoo-logo.svg"
           alt="at-tattoo logo"
@@ -22,9 +22,7 @@ export default function Header() {
 
       <nav role="navigation">
         <button
-          className={`relative w-8 h-5 mr-6 sm:hidden ${
-            menuOpen ? 'bg-red' : ''
-          }`}
+          className="relative w-8 h-5 mr-6 sm:hidden z-20"
           aria-expanded={menuOpen ? 'true' : 'false'}
           aria-controls="menu"
           aria-label="Menu"
@@ -47,7 +45,19 @@ export default function Header() {
           ></span>
         </button>
 
-        <ul id="menu" className="gap-6 mr-6 hidden sm:flex">
+        {/* mobile menu background */}
+        <div
+          className={`fixed top-0 left-0 h-screen w-screen bg-primary rounded-3xl transform translate-y-full scale-0 invisible sm:hidden ${
+            menuOpen ? 'animate-floatUp' : 'animate-floatDown'
+          }`}
+        ></div>
+
+        <ul
+          id="menu"
+          className={`absolute flex flex-col h-screen w-full justify-center items-center top-0 left-0 gap-6 mr-6 z-10 opacity-0 transition-opacity duration-200 sm:w-auto sm:h-auto sm:flex-row sm:static sm:opacity-100 ${
+            menuOpen ? 'opacity-100 delay-500' : 'delay-75'
+          }`}
+        >
           <li>Home</li>
           <li>Shop</li>
           <li>About</li>
