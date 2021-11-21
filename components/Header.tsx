@@ -62,7 +62,7 @@ export default function Header() {
 
         <ul
           id="menu"
-          className={`absolute flex flex-col h-screen w-full justify-center items-center top-0 left-0 gap-6 mr-6 z-10 opacity-0 transition-opacity duration-200 sm:w-auto sm:h-auto sm:flex-row sm:static sm:opacity-100 ${
+          className={`absolute flex flex-col h-90vh w-full justify-center items-center top-0 left-0 gap-6 mr-6 z-10 opacity-0 transition-opacity duration-200 sm:w-auto sm:h-auto sm:flex-row sm:static sm:opacity-100 ${
             menuOpen ? 'opacity-100 delay-500' : 'delay-75'
           }`}
         >

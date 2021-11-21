@@ -8,6 +8,10 @@ module.exports = {
       primary: '#ECDEE4',
     },
     extend: {
+      height: {
+        'screen/2': '50vh',
+        '90vh': '90vh',
+      },
       keyframes: {
         floatUp: {
           '0%': {
