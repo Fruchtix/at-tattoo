@@ -6,10 +6,13 @@ module.exports = {
       white: '#fff',
       black: '#000',
       primary: '#ECDEE4',
+      secondary: '#DCECE2',
+      gray: '#747474',
     },
     extend: {
       zIndex: {
         '-10': '-10',
+        '-1': '-1',
       },
       height: {
         'screen/2': '50vh',
