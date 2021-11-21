@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<null | boolean>(null);
 
   useEffect(() => {
     if (menuOpen) {
@@ -14,6 +15,10 @@ export default function Header() {
 
   function handleMenuClick() {
     setMenuOpen(isOpen => !isOpen);
+  }
+
+  function handleMenuItemClick() {
+    setMenuOpen(false);
   }
 
   return (
@@ -56,20 +61,58 @@ export default function Header() {
         {/* mobile menu background */}
         <div
           className={`fixed top-0 left-0 h-screen w-screen bg-primary rounded-3xl transform translate-y-full scale-0 invisible sm:hidden ${
-            menuOpen ? 'animate-floatUp' : 'animate-floatDown'
+            menuOpen
+              ? 'animate-floatUp'
+              : menuOpen === false && 'animate-floatDown'
           }`}
         ></div>
 
         <ul
           id="menu"
-          className={`absolute flex flex-col h-90vh w-full justify-center items-center top-0 left-0 gap-6 mr-6 z-10 opacity-0 transition-opacity duration-200 sm:w-auto sm:h-auto sm:flex-row sm:static sm:opacity-100 ${
+          className={`absolute flex flex-col h-90vh w-full justify-center items-center top-0 left-0 gap-10 mr-6 z-10 opacity-0 transition-opacity duration-200 sm:w-auto sm:h-auto sm:flex-row sm:static sm:opacity-100 ${
             menuOpen ? 'opacity-100 delay-500' : 'delay-75'
           }`}
         >
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Tattoos</li>
+          <li>
+            <Link href="/">
+              <a
+                className="font-medium text-3xl sm:text-lg"
+                onClick={handleMenuItemClick}
+              >
+                Home
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/shop">
+              <a
+                className="font-medium text-3xl sm:text-lg"
+                onClick={handleMenuItemClick}
+              >
+                Shop
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#about">
+              <a
+                className="font-medium text-3xl sm:text-lg"
+                onClick={handleMenuItemClick}
+              >
+                About
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#gallery">
+              <a
+                className="font-medium text-3xl sm:text-lg"
+                onClick={handleMenuItemClick}
+              >
+                Gallery
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

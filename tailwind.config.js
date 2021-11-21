@@ -8,9 +8,15 @@ module.exports = {
       primary: '#ECDEE4',
     },
     extend: {
+      zIndex: {
+        '-10': '-10',
+      },
       height: {
         'screen/2': '50vh',
         '90vh': '90vh',
+      },
+      fontFamily: {
+        sans: ['futura-pt', 'Helvetica', 'Arial', 'sans-serif'],
       },
       keyframes: {
         floatUp: {
