@@ -22,8 +22,8 @@ export default function Header() {
   }
 
   return (
-    <div className="flex justify-between items-center sticky top-0 bg-white">
-      <div className="w-1/3 relative m-2 z-20 sm:w-1/12">
+    <div className="flex justify-between items-center sticky top-0 h-8vh bg-white z-50">
+      <div className="w-1/3 relative m-2 z-20 md:w-1/12">
         <Image
           src="/../public/svgs/at-tattoo-logo.svg"
           alt="at-tattoo logo"
@@ -36,7 +36,7 @@ export default function Header() {
 
       <nav role="navigation">
         <button
-          className="relative w-8 h-5 mr-6 sm:hidden z-20"
+          className="relative w-8 h-5 mr-6 md:hidden z-20"
           aria-expanded={menuOpen ? 'true' : 'false'}
           aria-controls="menu"
           aria-label="Menu"
@@ -61,7 +61,7 @@ export default function Header() {
 
         {/* mobile menu background */}
         <div
-          className={`fixed top-0 left-0 z-10 h-screen w-screen bg-primary rounded-3xl transform translate-y-full scale-0 invisible sm:hidden ${
+          className={`fixed top-0 left-0 z-10 h-screen w-screen bg-primary rounded-3xl transform translate-y-full scale-0 invisible md:hidden ${
             menuOpen
               ? 'animate-floatUp'
               : menuOpen === false && 'animate-floatDown'
@@ -70,14 +70,16 @@ export default function Header() {
 
         <ul
           id="menu"
-          className={`absolute flex flex-col h-90vh w-full justify-center items-center top-0 left-0 gap-10 mr-6 z-10 opacity-0 transition-opacity duration-200 sm:w-auto sm:h-auto sm:flex-row sm:static sm:opacity-100 ${
-            menuOpen ? 'opacity-100 delay-500' : 'delay-0'
+          className={`absolute h-92vh flex flex-col h-90vh w-full justify-center items-center top-0 left-0 gap-14 lg:gap-14 md:gap-10 mr-6 opacity-0 transition-opacity duration-200 md:w-auto md:h-auto md:flex-row md:static md:opacity-100 md:visible ${
+            menuOpen
+              ? 'opacity-100 delay-500 z-10 visible'
+              : 'delay-0 invisible'
           }`}
         >
           <li>
             <Link href="/">
               <a
-                className="font-medium text-3xl sm:text-lg"
+                className="relative font-medium tracking-widest text-3xl md:text-2xl md:font-normal before:absolute before:w-0 before:h-0.5 before:top-1/2 before:-mt-0.5 before:bg-white hover:before:w-full before:transition-width before:duration-500 before:-left-1 after:absolute after:w-0 after:h-0.5 after:top-1/2 after:-mt-0.5 after:bg-white hover:after:bg-transparent hover:after:w-full hover:after:duration-0 after:transition-width after:duration-500 after:left-1"
                 onClick={handleMenuItemClick}
               >
                 Home
@@ -87,7 +89,7 @@ export default function Header() {
           <li>
             <Link href="/shop">
               <a
-                className="font-medium text-3xl sm:text-lg"
+                className="font-medium tracking-widest text-3xl md:text-2xl md:font-normal"
                 onClick={handleMenuItemClick}
               >
                 Shop
@@ -97,7 +99,7 @@ export default function Header() {
           <li>
             <Link href="/#about">
               <a
-                className="font-medium text-3xl sm:text-lg"
+                className="font-medium tracking-widest text-3xl md:text-2xl md:font-normal"
                 onClick={handleMenuItemClick}
               >
                 About
@@ -107,7 +109,7 @@ export default function Header() {
           <li>
             <Link href="/#gallery">
               <a
-                className="font-medium text-3xl sm:text-lg"
+                className="font-medium tracking-widest text-3xl md:text-2xl md:font-normal"
                 onClick={handleMenuItemClick}
               >
                 Gallery

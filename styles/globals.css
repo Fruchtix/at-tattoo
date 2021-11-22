@@ -12,3 +12,9 @@
     @apply text-xl;
   }
 }
+
+@layer utilities {
+  .text-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+}

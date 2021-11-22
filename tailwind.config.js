@@ -1,8 +1,10 @@
 module.exports = {
+  mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      transparent: 'transparent',
       white: '#fff',
       black: '#000',
       primary: '#ECDEE4',
@@ -10,13 +12,20 @@ module.exports = {
       gray: '#747474',
     },
     extend: {
+      transitionDuration: {
+        0: '0ms',
+      },
+      transitionProperty: {
+        width: 'width',
+      },
       zIndex: {
         '-10': '-10',
         '-1': '-1',
       },
       height: {
         'screen/2': '50vh',
-        '90vh': '90vh',
+        '92vh': '92vh',
+        '8vh': '8vh',
       },
       fontFamily: {
         sans: ['futura-pt', 'Helvetica', 'Arial', 'sans-serif'],
