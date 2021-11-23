@@ -22,10 +22,16 @@ module.exports = {
         '-10': '-10',
         '-1': '-1',
       },
+      minHeight: {
+        '92vh': '92vh',
+      },
       height: {
         'screen/2': '50vh',
         '92vh': '92vh',
         '8vh': '8vh',
+      },
+      width: {
+        'screen/2': '50%',
       },
       fontFamily: {
         sans: ['futura-pt', 'Helvetica', 'Arial', 'sans-serif'],

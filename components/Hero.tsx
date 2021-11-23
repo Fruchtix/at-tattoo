@@ -4,7 +4,7 @@ import amelieGoebel from '../public/images/amelie-goebel.png';
 
 export default function Hero() {
   return (
-    <div className="flex flex-col h-92vh md:flex-row md:justify-center 2xl:justify-between md:max-w-screen-xl md:mx-auto md:items-center">
+    <div className="flex flex-col min-h-92vh md:flex-row md:justify-center 2xl:justify-between md:max-w-screen-xl md:mx-auto md:items-center">
       <div className="mx-5 mt-12 flex flex-col justify-center items-center text-center md:mt-0">
         <h2 className="font-medium text-gray text-base uppercase md:text-xl tracking-wider">
           Tattoo by amy

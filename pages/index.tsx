@@ -1,9 +1,23 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import About from '../components/About';
 
 export default function Home() {
+  useEffect(() => {
+    applyScrollMarginToAnchors();
+  }, []);
+
+  function applyScrollMarginToAnchors() {
+    const anchors = document.querySelectorAll<HTMLElement>('[data-anchor-link]');
+    const headerHeight = document.getElementById('header');
+
+    anchors.forEach(anchor => {
+      anchor.style.scrollMarginTop = `${headerHeight.offsetHeight}px`;
+    });
+  }
+
   return (
     <>
       <Head>
@@ -12,6 +26,7 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <About />
 
       <div className="h-screen"></div>
       <div className="h-screen"></div>
