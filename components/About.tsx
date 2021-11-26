@@ -9,7 +9,7 @@ export default function About() {
       className="mx-5 mt-0 md:mt-40 md:flex md:flex-row-reverse md:max-w-screen-2xl md:mx-10 2xl:mx-auto"
     >
       <div className="md:mt-10 xl:mt-20 md:w-screen/2 md:pl-10 xl:pl-16">
-        <h3 className="text-gray tracking-wider">Amy Tattoos</h3>
+        <h3 className="text-gray tracking-wider">Fineline Artist</h3>
         <h2 className="font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-wider">About me</h2>
 
         <p className="text-gray my-5 text-lg">

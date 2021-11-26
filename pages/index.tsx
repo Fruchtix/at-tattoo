@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import ShopPreview from '../components/ShopPreview';
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <ShopPreview />
 
       <div className="h-screen"></div>
       <div className="h-screen"></div>

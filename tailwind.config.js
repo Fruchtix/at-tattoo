@@ -7,9 +7,11 @@ module.exports = {
       transparent: 'transparent',
       white: '#fff',
       black: '#000',
+      'black-secondary': '#222222',
       primary: '#ECDEE4',
       secondary: '#DCECE2',
       gray: '#747474',
+      'gray-light': '#F1F1F1',
     },
     extend: {
       transitionDuration: {
