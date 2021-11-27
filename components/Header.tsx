@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import logo from '../public/svgs/at-tattoo-logo.svg';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
@@ -29,7 +30,7 @@ export default function Header() {
       <div className="w-1/3 relative md:m-2 ml-2 md:ml-6 z-20 md:w-1/12 cursor-pointer">
         <Link href="/" passHref>
           <Image
-            src="/../public/svgs/at-tattoo-logo.svg"
+            src={logo}
             alt="at-tattoo logo"
             layout="responsive"
             width={400}

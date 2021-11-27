@@ -9,7 +9,7 @@ export default function ShopPreview() {
     <section
       id="shop"
       data-anchor-link
-      className="bg-gray-light px-5 md:px-0 mt-14 pt-14 pb-16 md:my-36 md:py-36"
+      className="bg-gray-light px-5 md:px-0 my-14 pt-14 pb-16 md:my-36 md:py-36"
     >
       <div className="md:max-w-screen-2xl md:flex md:flex-row-reverse md:justify-between md:mx-10 2xl:mx-auto">
         <div className="flex flex-shrink-0 items-stretch relative md:flex-grow">
