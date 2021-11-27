@@ -6,7 +6,11 @@ import shopImageThree from '../public/images/shop_product_3.png';
 
 export default function ShopPreview() {
   return (
-    <div className="bg-gray-light px-5 md:px-0 mt-14 pt-14 pb-16 md:my-36 md:py-36">
+    <section
+      id="shop"
+      data-anchor-link
+      className="bg-gray-light px-5 md:px-0 mt-14 pt-14 pb-16 md:my-36 md:py-36"
+    >
       <div className="md:max-w-screen-2xl md:flex md:flex-row-reverse md:justify-between md:mx-10 2xl:mx-auto">
         <div className="flex flex-shrink-0 items-stretch relative md:flex-grow">
           <div className="rotate-180 text-vertical-rl font-semibold text-3xl mr-5 sm:text-5xl lg:text-6xl tracking-wider md:w-4/12 md:mr-0 md:self-start md:flex md:flex-col md:justify-center">
@@ -43,6 +47,6 @@ export default function ShopPreview() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

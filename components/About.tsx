@@ -3,7 +3,7 @@ import studio from '../public/images/at-tattoo-studio.png';
 
 export default function About() {
   return (
-    <div
+    <section
       id="about"
       data-anchor-link
       className="mx-5 mt-0 md:mt-40 md:flex md:flex-row-reverse md:max-w-screen-2xl md:mx-10 2xl:mx-auto"
@@ -24,6 +24,6 @@ export default function About() {
       <div className="md:flex-grow md:w-screen/2">
         <Image src={studio} alt="amy tattoos studio" width={360} height={202} layout="responsive" />
       </div>
-    </div>
+    </section>
   );
 }
