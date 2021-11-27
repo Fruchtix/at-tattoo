@@ -14,6 +14,9 @@ module.exports = {
       'gray-light': '#F1F1F1',
     },
     extend: {
+      margin: {
+        18: '4.5rem',
+      },
       transitionDuration: {
         0: '0ms',
       },
