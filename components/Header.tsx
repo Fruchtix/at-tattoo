@@ -28,15 +28,17 @@ export default function Header() {
       className="flex justify-between items-center sticky top-0 md:h-8vh bg-white z-50"
     >
       <div className="w-1/3 relative md:m-2 ml-2 md:ml-6 z-20 md:w-1/12 cursor-pointer">
-        <Link href="/" passHref>
-          <Image
-            src={logo}
-            alt="at-tattoo logo"
-            layout="responsive"
-            width={400}
-            height={200}
-            priority={true}
-          />
+        <Link href="/">
+          <a>
+            <Image
+              src={logo}
+              alt="at-tattoo logo"
+              layout="responsive"
+              width={400}
+              height={200}
+              priority={true}
+            />
+          </a>
         </Link>
       </div>
 
