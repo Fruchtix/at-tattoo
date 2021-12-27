@@ -33,7 +33,7 @@ export default function BookingPreview() {
     <section
       id="bookings"
       data-anchor-link
-      className="md:flex md:justify-between md:max-w-screen-2xl px-5 md:ml-10 md:px-0 2xl:mx-auto relative"
+      className="md:flex mb-20 md:justify-between md:max-w-screen-2xl px-5 md:ml-10 md:px-0 2xl:mx-auto relative"
     >
       <div className="pt-64 md:pt-0 flex-grow md:w-8/12 md:mr-20">
         <div className="mb-4">

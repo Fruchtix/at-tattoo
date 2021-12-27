@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import ShopPreview from '../components/ShopPreview';
 import BookingPreview from '../components/BookingPreview';
+import ParallaxNewsletter from '../components/ParallaxNewsletter';
 
 export default function Home() {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Home() {
       <About />
       <ShopPreview />
       <BookingPreview />
+      <ParallaxNewsletter />
 
       <div className="h-screen"></div>
       <div className="h-screen"></div>
