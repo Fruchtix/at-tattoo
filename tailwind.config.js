@@ -12,6 +12,7 @@ module.exports = {
       secondary: '#DCECE2',
       gray: '#747474',
       'gray-light': '#F1F1F1',
+      'gray-dark': '#EEEEEE',
     },
     extend: {
       margin: {

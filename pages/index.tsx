@@ -6,6 +6,7 @@ import About from '../components/About';
 import ShopPreview from '../components/ShopPreview';
 import BookingPreview from '../components/BookingPreview';
 import ParallaxNewsletter from '../components/ParallaxNewsletter';
+import Reviews from '../components/Reviews';
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
       <ShopPreview />
       <BookingPreview />
       <ParallaxNewsletter />
+      <Reviews />
 
       <div className="h-screen"></div>
       <div className="h-screen"></div>
