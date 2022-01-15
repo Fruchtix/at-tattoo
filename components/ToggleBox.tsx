@@ -5,7 +5,10 @@ import chevronUp from '../public/svgs/chevron-up.svg';
 export default function ToggleBox({ id, isOpen, handleToggleboxClick, title, children }) {
   return (
     <div className="border-b py-5">
-      <div className="flex justify-between items-center" onClick={() => handleToggleboxClick(id)}>
+      <div
+        className="flex justify-between items-center cursor-pointer"
+        onClick={() => handleToggleboxClick(id)}
+      >
         <span className="font-semibold text-xl">{title}</span>
         <Image src={isOpen ? chevronUp : chevronDown} alt="" />
       </div>

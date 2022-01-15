@@ -3,7 +3,6 @@ import Image from 'next/image';
 import chevronRight from '../public/svgs/chevron-up.svg';
 import reviewImageOne from '../public/images/shop_product_2.png';
 import Review from './Review';
-import debounce from '../utils/debounce';
 
 export default function Reviews() {
   const refSlider = useRef(null);
@@ -57,7 +56,7 @@ export default function Reviews() {
   }
 
   return (
-    <div className="px-5 md:px-0 mt-12">
+    <div className="px-5 md:px-0 mt-12 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-24">
       <a href="https://www.instagram.com/tattoo.by.amy/">
         <div className="flex justify-end items-center">
           <span className="mr-2">More inpspiration on my insta</span>
@@ -68,20 +67,42 @@ export default function Reviews() {
       </a>
 
       <div ref={refSlider} className="slider flex overflow-x-auto">
-        <div className="hidden md:block">what people say</div>
+        <div className="hidden md:block md:w-4/12">
+          <div className="flex flex-col items-center absolute">
+            <div className="rotate-180 text-vertical-rl translate-y-6 font-semibold text-5xl lg:text-6xl tracking-wider text-gray opacity-30">
+              People
+              <br />
+              say
+            </div>
+            <div className="rounded-full w-36 h-36 xl:w-52 xl:h-52 bg-primary"></div>
+            <div className="rotate-180 text-vertical-rl -translate-y-16 font-semibold text-5xl lg:text-6xl tracking-wider">
+              People
+              <br />
+              say
+            </div>
+          </div>
+        </div>
 
-        <div id="slide-1" ref={refSlideOne} className="slide w-full flex-shrink-0">
+        <div
+          id="slide-1"
+          ref={refSlideOne}
+          className="slide w-full flex-shrink-0 md:w-4/12 md:pr-10"
+        >
           <Review
             image={reviewImageOne}
             profileImage={reviewImageOne}
             text="Ja ich mag das, war wirklich toll. Aber einmal reicht."
           />
         </div>
-        <div id="slide-2" ref={refSlideTwo} className="slide w-full flex-shrink-0">
+        <div
+          id="slide-2"
+          ref={refSlideTwo}
+          className="slide w-full flex-shrink-0 md:w-4/12 md:pl-10"
+        >
           <Review
             image={reviewImageOne}
             profileImage={reviewImageOne}
-            text="Joa ich mag das, war ganz toll. Aber einmal reicht."
+            text="Joa ich mag das, war ganz toll. Aber einmal reicht. Joa ich mag das, war ganz toll. Aber einmal reicht."
           />
         </div>
         <div id="slide-3" ref={refSlideThree} className="slide w-full flex-shrink-0 md:hidden">
@@ -93,7 +114,7 @@ export default function Reviews() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-8 md:hidden">
         <div
           onClick={() => scrollToSlide(1)}
           className={`w-5 h-5 mx-2 rounded-full ${

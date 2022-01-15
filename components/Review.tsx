@@ -8,10 +8,10 @@ export default function Review({ image, profileImage, text }) {
       </div>
 
       <div className="flex mt-4">
-        <div className="rounded-full overflow-hidden w-12 h-12 mr-4">
-          <Image src={profileImage} alt="" layout="responsive" objectFit="cover" />
+        <div className="relative rounded-full overflow-hidden w-12 h-12 flex-shrink-0">
+          <Image src={profileImage} alt="" layout="fill" objectFit="cover" />
         </div>
-        <div>
+        <div className="ml-4">
           <span className="font-semibold text-lg">Andi Eier</span>
           <p className="text-gray">{text}</p>
         </div>

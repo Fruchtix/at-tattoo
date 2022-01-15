@@ -7,6 +7,7 @@ import ShopPreview from '../components/ShopPreview';
 import BookingPreview from '../components/BookingPreview';
 import ParallaxNewsletter from '../components/ParallaxNewsletter';
 import Reviews from '../components/Reviews';
+import Footer from '../components/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function Home() {
     const headerHeight = document.getElementById('header');
 
     anchors.forEach(anchor => {
-      anchor.style.scrollMarginTop = `${headerHeight.offsetHeight}px`;
+      anchor.style.scrollMarginTop = `${headerHeight.offsetHeight + 25}px`;
     });
   }
 
@@ -35,9 +36,7 @@ export default function Home() {
       <BookingPreview />
       <ParallaxNewsletter />
       <Reviews />
-
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
+      <Footer />
     </>
   );
 }

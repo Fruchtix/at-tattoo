@@ -35,7 +35,7 @@ export default function BookingPreview() {
       data-anchor-link
       className="md:flex mb-20 md:justify-between md:max-w-screen-2xl px-5 md:ml-10 md:px-0 2xl:mx-auto relative"
     >
-      <div className="pt-64 md:pt-0 flex-grow md:w-8/12 md:mr-20">
+      <div className="md:pt-0 flex-grow md:w-8/12">
         <div className="mb-4">
           <h3 className="text-gray tracking-wider">3 Schritte</h3>
           <h2 className="font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-wider">
@@ -52,7 +52,7 @@ export default function BookingPreview() {
           >
             Erst einmal vielen Dank für dein Interesse, ein Tattoo von mir zu bekommen. Fülle mein{' '}
             <Link href="/bookings">
-              <a>Buchungsformular</a>
+              <a className="font-semibold underline">Buchungsformular</a>
             </Link>{' '}
             aus, damit ich deine Anfrage entsprechend bearbeiten kann. Dabei wäre es gut, wenn du
             mir deine Tattoo-Idee so weit schilderst, dass ich einen ersten Eindruck davon bekomme,
@@ -82,9 +82,9 @@ export default function BookingPreview() {
         </div>
       </div>
 
-      <div className="absolute top-0 right-0 md:static -z-1 md:w-4/12 w-screen">
+      {/* <div className="absolute top-0 right-0 md:static -z-1 md:w-4/12 w-screen">
         <Image src={bookingsBlob} alt="" width={1438} height={2326} layout="responsive" />
-      </div>
+      </div> */}
     </section>
   );
 }
