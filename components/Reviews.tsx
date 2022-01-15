@@ -56,7 +56,7 @@ export default function Reviews() {
   }
 
   return (
-    <div className="px-5 md:px-0 mt-12 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-24">
+    <div className="px-5 md:px-0 mt-16 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-36">
       <a href="https://www.instagram.com/tattoo.by.amy/">
         <div className="flex justify-end items-center">
           <span className="mr-2">More inpspiration on my insta</span>

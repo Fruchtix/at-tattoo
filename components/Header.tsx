@@ -36,6 +36,7 @@ export default function Header() {
               layout="responsive"
               width={400}
               height={200}
+              quality={100}
               priority={true}
             />
           </a>

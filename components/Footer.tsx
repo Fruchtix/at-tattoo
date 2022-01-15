@@ -5,7 +5,7 @@ import instagram from '../public/svgs/instagram.svg';
 export default function Footer() {
   return (
     <div className="bg-gray-light">
-      <div className="px-5 md:px-0 mt-16 pt-16 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-24">
+      <div className="px-5 md:px-0 mt-16 pt-16 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-24 md:pt-24">
         <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left md:items-stretch">
           <div className="flex-shrink-0">
             <h3 className="font-semibold text-3xl lg:text-4xl tracking-wider mb-4">Kontakt</h3>
