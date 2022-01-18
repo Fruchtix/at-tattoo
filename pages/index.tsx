@@ -23,6 +23,19 @@ export default function Home() {
     });
   }
 
+  // Todo:
+  // logo unscharf
+  // check out my und dann irgendeine linie
+  // bilder austauschen
+  // newsletter btn
+  // impressum
+  // datenschutz
+  // bookings page
+  // alt text
+  // header with seo
+  // favicon
+  // shop under construction image
+
   return (
     <>
       <Head>

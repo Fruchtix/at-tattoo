@@ -13,6 +13,7 @@ module.exports = {
       gray: '#747474',
       'gray-light': '#F1F1F1',
       'gray-dark': '#EEEEEE',
+      red: '#ff0f0f',
     },
     extend: {
       margin: {
@@ -27,6 +28,9 @@ module.exports = {
       zIndex: {
         '-10': '-10',
         '-1': '-1',
+      },
+      translate: {
+        '2/5': '40%',
       },
       minHeight: {
         '92vh': '92vh',

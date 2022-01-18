@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Review({ image, profileImage, text }) {
+export default function Review({ image, profileImage, name, text }) {
   return (
     <div className="mt-6">
       <div className="rounded-lg overflow-hidden">
@@ -9,10 +9,16 @@ export default function Review({ image, profileImage, text }) {
 
       <div className="flex mt-4">
         <div className="relative rounded-full overflow-hidden w-12 h-12 flex-shrink-0">
-          <Image src={profileImage} alt="" layout="fill" objectFit="cover" />
+          <Image
+            src={profileImage}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top center"
+          />
         </div>
         <div className="ml-4">
-          <span className="font-semibold text-lg">Andi Eier</span>
+          <span className="font-semibold text-lg">{name}</span>
           <p className="text-gray">{text}</p>
         </div>
       </div>

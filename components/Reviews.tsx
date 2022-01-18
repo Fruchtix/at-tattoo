@@ -91,6 +91,7 @@ export default function Reviews() {
           <Review
             image={reviewImageOne}
             profileImage={reviewImageOne}
+            name="Andi Eier"
             text="Ja ich mag das, war wirklich toll. Aber einmal reicht."
           />
         </div>
@@ -101,6 +102,7 @@ export default function Reviews() {
         >
           <Review
             image={reviewImageOne}
+            name="Barbara Bumsebacke"
             profileImage={reviewImageOne}
             text="Joa ich mag das, war ganz toll. Aber einmal reicht. Joa ich mag das, war ganz toll. Aber einmal reicht."
           />
@@ -108,6 +110,7 @@ export default function Reviews() {
         <div id="slide-3" ref={refSlideThree} className="slide w-full flex-shrink-0 md:hidden">
           <Review
             image={reviewImageOne}
+            name="Erich Merich"
             profileImage={reviewImageOne}
             text="Nein ich mag das, war wirklich toll. Aber einmal reicht."
           />
