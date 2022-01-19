@@ -17,6 +17,9 @@
   input {
     @apply my-2 w-full p-2 rounded-lg border border-transparent;
   }
+  textarea {
+    @apply my-2 w-full p-2 rounded-lg border border-transparent;
+  }
 }
 
 @layer components {
