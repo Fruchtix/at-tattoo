@@ -30,7 +30,8 @@ export default function Home() {
   // newsletter btn
   // impressum
   // datenschutz
-  // bookings page
+  // send form data via mail
+  // option to disable bookings and the newsletter signup
   // alt text
   // header with seo
   // favicon
