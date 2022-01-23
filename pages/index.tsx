@@ -27,7 +27,6 @@ export default function Home() {
   // logo unscharf
   // check out my und dann irgendeine linie
   // bilder austauschen
-  // newsletter btn
   // impressum
   // datenschutz
   // send form data via mail
