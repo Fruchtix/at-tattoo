@@ -24,22 +24,22 @@ export default function Home() {
   }
 
   // Todo:
-  // logo unscharf
-  // check out my und dann irgendeine linie
-  // bilder austauschen
+  // send form data via mail
+  // newsletter signup
+  // Hosting
   // impressum
   // datenschutz
-  // send form data via mail
-  // option to disable bookings and the newsletter signup
+
+  // logo unscharf
+  // bilder austauschen
   // alt text
-  // header with seo
   // favicon
-  // shop under construction image
 
   return (
     <>
       <Head>
-        <title>at Tattoo Homepage</title>
+        <title>Fineline Tattoo Artist - Tattoo by Amy</title>
+        <meta name="description" content="Fineline Tattoo Studio Wuppertal - Amelie Göbel" />
       </Head>
 
       <Header />

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { postBookingRequest } from '../lib/firebase';
 
 enum ErrorMessages {
   Email = 'Fehler: Deine Emails stimmen nicht überein.',
@@ -49,6 +50,21 @@ export default function BookingContact() {
       setErrorMessage(ErrorMessages.Age);
       return;
     }
+
+    postBookingRequest({
+      name,
+      surname,
+      email,
+      age,
+      tattooDescription,
+      tattooPosition,
+      tattooSize,
+      peopleCount,
+      peopleCountTxt,
+      alreadyCustomer,
+      preferedTime,
+      subscribeToNewsletter,
+    });
   }
 
   return (
