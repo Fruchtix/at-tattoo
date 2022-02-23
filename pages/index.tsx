@@ -23,17 +23,12 @@ export default function Home() {
     });
   }
 
-  // Todo:
+  // TODO:
   // send form data via mail
   // newsletter signup
   // Hosting
-  // impressum
-  // datenschutz
 
-  // logo unscharf
-  // bilder austauschen
   // alt text
-  // favicon
 
   return (
     <>

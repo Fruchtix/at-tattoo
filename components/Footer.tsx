@@ -41,9 +41,7 @@ export default function Footer() {
           </a>
           <div className="text-black-secondary text-lg md:flex md:items-center">
             <Link href="/datenschutz" passHref>
-              <a>
-                <div className="my-8 underline md:mr-5">Datenschutz</div>
-              </a>
+              <a>{/* <div className="my-8 underline md:mr-5">Datenschutz</div> */}</a>
             </Link>
             <Link href="/impressum" passHref>
               <a>
