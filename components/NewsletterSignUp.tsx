@@ -13,7 +13,9 @@ export default function NewsletterSignUp() {
       <form onSubmit={handleSubmit}>
         <div className="bg-gray-light p-4 rounded-lg">
           <h3 className="font-semibold">Für den Newsletter anmelden</h3>
-          <p className="text-gray">Füller das loreum skdfjal dfaldjfa sldfj acon nldkaödakd.</p>
+          <p className="text-gray">
+            Füller das Formular bitte aus. Keine Angst, ich werde dich nicht zu spammen.
+          </p>
 
           <div className="md:flex">
             <input

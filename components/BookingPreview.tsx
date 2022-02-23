@@ -50,14 +50,12 @@ export default function BookingPreview() {
             handleToggleboxClick={handleToggleboxClick}
             title="1. Buchungsformular ausfüllen"
           >
-            Erst einmal vielen Dank für dein Interesse, ein Tattoo von mir zu bekommen. Fülle mein{' '}
+            Vielen Dank für dein Interesse ein Tattoo von mir zu bekommen. Fülle zuerst mein{' '}
             <Link href="/bookings">
               <a className="font-semibold underline">Buchungsformular</a>
             </Link>{' '}
-            aus, damit ich deine Anfrage entsprechend bearbeiten kann. Dabei wäre es gut, wenn du
-            mir deine Tattoo-Idee so weit schilderst, dass ich einen ersten Eindruck davon bekomme,
-            was du dir vorstellst. Kleine Details oder Änderungen können wir noch vor Ort
-            besprechen.
+            aus und schildere mir dabei deine Tattoo-Idee, so dass ich einen Eindruck von deinem
+            Wunschmotiv bekomme. Kleine Details oder Abänderung besprechen wir dann vor Ort.‬
           </ToggleBox>
           <ToggleBox
             isOpen={toggleBoxTwoOpen}
@@ -65,9 +63,8 @@ export default function BookingPreview() {
             handleToggleboxClick={handleToggleboxClick}
             title="2. Ich gehe deine Anfrage durch"
           >
-            Nachdem du deine Anfrage verschickt hast, kannst du dich erstmal zurücklehnen. Ich gehe
-            in Ruhe alle Anfrage durch und schaue, welche am besten zu meinem Stil passen. Das kann
-            ein paar Tage dauern.
+            Jetzt kannst du dich erstmal zurücklehnen. Ich gehe alle Anfragen durch und entscheide
+            was ich mir illustrativ vorstellen kann.
           </ToggleBox>
           <ToggleBox
             isOpen={toggleBoxThreeOpen}
@@ -75,16 +72,11 @@ export default function BookingPreview() {
             handleToggleboxClick={handleToggleboxClick}
             title="3. Wir finden einen passenden Termin"
           >
-            Wenn ich mir deine Tattoo Idee gut vorstellen kann, erhälst du eine Email mit allen
-            weiteren Details wie Adresse, Kostenschätzung und einen Terminvorschlag. Keine Angst,
-            sollte dir der Termin nicht passen, finden wir auch einen anderen!
+            Wenn ich mir deine Tattoo Idee gut vorstellen kann, bekommst du eine E-Mail mit einem
+            Terminvorschlag von mir. Alle weiteren Details bequatschen wir dann.‬
           </ToggleBox>
         </div>
       </div>
-
-      {/* <div className="absolute top-0 right-0 md:static -z-1 md:w-4/12 w-screen">
-        <Image src={bookingsBlob} alt="" width={1438} height={2326} layout="responsive" />
-      </div> */}
     </section>
   );
 }

@@ -20,7 +20,6 @@ export default function Footer() {
             <p className="leading-8 mt-8 text-black-secondary text-lg">
               kontakt@at-tattoos.com
               <br />
-              +49 1726277705
               <br />
             </p>
           </div>

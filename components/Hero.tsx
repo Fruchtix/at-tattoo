@@ -17,14 +17,12 @@ export default function Hero() {
 
         <div className="my-7">
           <Link href="/#bookings">
-            <a className="bg-secondary px-6 py-4 rounded uppercase tracking-wide">
-              Book now
-            </a>
+            <a className="bg-secondary px-6 py-4 rounded uppercase tracking-wide">Book now</a>
           </Link>
         </div>
       </div>
 
-      <div className="mt-6 h-full md:w-2/4 md:flex md:flex-col md:justify-center md:m-0 sm:mx-10">
+      <div className="mt-6 mx-4 md:mx-0 h-full md:w-2/4 md:flex md:flex-col md:justify-center md:m-0 sm:mx-10">
         <Image
           src={amelieGoebel}
           alt="Amelie Goebel Fineline Tattoo Artist"

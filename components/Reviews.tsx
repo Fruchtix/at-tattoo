@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import chevronRight from '../public/svgs/chevron-up.svg';
-import reviewImageOne from '../public/images/shop_product_2.png';
+import reviewProfileImageOne from '../public/images/tattoo-review-profile_1.jpg';
+import reviewProfileImageTwo from '../public/images/tattoo-review-profile_2.jpg';
+import reviewProfileImageThree from '../public/images/tattoo-review-profile_3.jpeg';
+import reviewImageOne from '../public/images/tattoo-review_1.jpg';
+import reviewImageTwo from '../public/images/tattoo-review_2.jpg';
+import reviewImageThree from '../public/images/tattoo-review_3.jpg';
 import Review from './Review';
 
 export default function Reviews() {
@@ -56,7 +61,11 @@ export default function Reviews() {
   }
 
   return (
-    <div className="px-5 md:px-0 mt-16 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-36">
+    <div
+      id="gallery"
+      data-anchor-link
+      className="px-5 md:px-0 mt-16 md:max-w-screen-2xl md:mx-10 2xl:mx-auto md:mt-36"
+    >
       <a href="https://www.instagram.com/tattoo.by.amy/">
         <div className="flex justify-end items-center">
           <span className="mr-2">More inpspiration on my insta</span>
@@ -90,7 +99,7 @@ export default function Reviews() {
         >
           <Review
             image={reviewImageOne}
-            profileImage={reviewImageOne}
+            profileImage={reviewProfileImageOne}
             name="Andi Eier"
             text="Ja ich mag das, war wirklich toll. Aber einmal reicht."
           />
@@ -101,17 +110,17 @@ export default function Reviews() {
           className="slide w-full flex-shrink-0 md:w-4/12 md:pl-10"
         >
           <Review
-            image={reviewImageOne}
+            image={reviewImageTwo}
             name="Barbara Bumsebacke"
-            profileImage={reviewImageOne}
+            profileImage={reviewProfileImageTwo}
             text="Joa ich mag das, war ganz toll. Aber einmal reicht. Joa ich mag das, war ganz toll. Aber einmal reicht."
           />
         </div>
         <div id="slide-3" ref={refSlideThree} className="slide w-full flex-shrink-0 md:hidden">
           <Review
-            image={reviewImageOne}
+            image={reviewImageThree}
             name="Erich Merich"
-            profileImage={reviewImageOne}
+            profileImage={reviewProfileImageThree}
             text="Nein ich mag das, war wirklich toll. Aber einmal reicht."
           />
         </div>

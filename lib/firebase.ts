@@ -14,14 +14,14 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const functions = getFunctions(app);
+// const functions = getFunctions(app);
 
-export function postBookingRequest(data) {
-  const sendBookingRequest = httpsCallable(functions, 'sendBookingRequest');
+// export function postBookingRequest(data) {
+//   const sendBookingRequest = httpsCallable(functions, 'sendBookingRequest');
 
-  sendBookingRequest(data).then(result => {
-    const data: any = result.data;
+//   sendBookingRequest(data).then(result => {
+//     const data: any = result.data;
 
-    console.log(data);
-  });
-}
+//     console.log(data);
+//   });
+// }

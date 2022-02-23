@@ -13,11 +13,12 @@ export default function About() {
         <h2 className="font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-wider">About me</h2>
 
         <p className="text-gray my-5 text-lg">
-          It is a long established fact that a reader will be distracted by the readable content of
-          a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-          more-or-less normal. Distribution of letters, as opposed to using Content here, content
-          here, making it look like readable English. Many desktop publishing packages and web page
-          editors now use Lorem Ipsum as their default model text, and a search
+          Willkommen auf meiner Website. Ich bin Amelie, auch bekannt als Amy und habe schon als
+          Kind geliebt zu zeichnen. Meine Kreativität kann ich jetzt nicht nur in meinem
+          Kommunikationsdesign Studium, sondern auch in meinem Job als Tätowiererin ausleben. Schon
+          mit 17 habe ich meine eigene Tattoo Maschine besessen und habe jetzt bereits seit 2 Jahren
+          mein Hobby zum Beruf gemacht. Spezialisiert habe ich mich auf dünne Linien und dezente
+          Schattierungen, wobei ich am liebsten florale, abstrakte oder tierische Motive umsetze.
         </p>
       </div>
 

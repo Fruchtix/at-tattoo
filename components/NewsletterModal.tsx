@@ -29,7 +29,9 @@ export default function NewsletterModal({ closeModal }) {
                 &#10006;
               </div>
               <h3 className="font-semibold">Für den Newsletter anmelden</h3>
-              <p className="text-gray">Füller das loreum skdfjal dfaldjfa sldfj acon nldkaödakd.</p>
+              <p className="text-gray">
+                Füller das Formular bitte aus. Keine Angst, ich werde dich nicht zu spammen.
+              </p>
 
               <div className="md:flex">
                 <input

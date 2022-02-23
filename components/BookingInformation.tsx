@@ -9,11 +9,9 @@ export default function BookingInformation() {
         <h2 className="font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-wider">Bookings</h2>
 
         <p className="text-gray my-5 text-lg">
-          Tut mir leid, zur Zeit nehme ich leider keine Terminanfragen an! 🤍 Bitte sende mir daher
-          bis zu den nächsten Bookings keine Motivwünsche oder Preisanfragen. Das Kontaktformular
-          ist ausschließlich gedacht für: Wannado-Anfragen, Nachstechanfragen, Fragen zu deinem
-          bestehenden Tattoo und sonstige Anliegen. Sobald die bookings offen sind kannst du hier
-          das formular ausfüllen. <br />
+          Tut mir leid, zurzeit nehme ich leider keine Terminanfragen an. Bitte sende mir daher bis
+          zu den nächsten Bookings keine Motivwünsche oder Preisanfragen. Wenn du zum Nachstechen
+          kommen möchtest, sende mir gerne eine E-Mail.‬ <br />
           <br />
           Das Kontaktformular ist ausschließlich gedacht für: Wannado-Anfragen, Nachstechanfragen,
           Fragen zu deinem bestehenden Tattoo und sonstige Anliegen. Sobald die bookings offen sind
@@ -22,7 +20,7 @@ export default function BookingInformation() {
       </div>
 
       <div className="translate-x-1/2 md:translate-x-0 md:w-screen/2 md:mt-16">
-        <Image src={bookingsImage} alt="" width={660} height={565} layout="responsive" />
+        <Image src={bookingsImage} alt="" width={1435} height={1321} layout="responsive" />
       </div>
     </div>
   );
