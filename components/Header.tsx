@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/svgs/at-tattoo-logo.svg';
+import logo from '../public/images/at-tattoo-logo.png';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
@@ -27,15 +27,15 @@ export default function Header() {
       id="header"
       className="flex justify-between items-center sticky top-0 md:h-8vh bg-white z-50"
     >
-      <div className="w-1/3 relative md:m-2 ml-2 md:ml-6 z-20 md:w-1/12 cursor-pointer">
+      <div className="w-1/3 relative m-3 md:m-2 md:ml-6 z-20 md:w-1/12 cursor-pointer">
         <Link href="/">
           <a>
             <Image
               src={logo}
               alt="at-tattoo logo"
               layout="responsive"
-              width={400}
-              height={200}
+              width={648}
+              height={185}
               quality={100}
               priority={true}
             />
