@@ -23,8 +23,23 @@ export default function BookingContact() {
   const [preferedTime, setPreferedTime] = useState('');
   const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
+    let upLoadedFilesFormatted = [];
+
+    for (let i = 0; i < upLoadedFiles.length; i++) {
+      const fileName = upLoadedFiles[i].name;
+
+      upLoadedFilesFormatted.push({
+        content: await toBase64(upLoadedFiles[i]),
+        filename: 'Reference_' + i + fileName.substring(fileName.lastIndexOf('.')),
+        type: upLoadedFiles[i].type,
+        disposition: 'attachment',
+      });
+    }
+
+    console.log(upLoadedFilesFormatted);
     console.log('submit');
     console.log(name);
     console.log(surname);
@@ -64,6 +79,16 @@ export default function BookingContact() {
       alreadyCustomer,
       preferedTime,
       subscribeToNewsletter,
+      upLoadedFilesFormatted,
+    });
+  }
+
+  function toBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
     });
   }
 
@@ -189,7 +214,11 @@ export default function BookingContact() {
           <p className="text-gray">Füge bitte mindestens ein Referenzbild hinzu.</p>
 
           <input
-            onChange={e => setUpLoadedFiles(e.target.files)}
+            onChange={e => {
+              setUpLoadedFiles(e.target.files);
+              console.log(e.target.files);
+              console.log(typeof e.target.files);
+            }}
             type="file"
             name="tattoo-reference"
             id="tattoo-reference"
