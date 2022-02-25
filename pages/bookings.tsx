@@ -37,7 +37,7 @@ export default function Bookings() {
       </Head>
 
       <Header />
-      <BookingInformation />
+      <BookingInformation bookingsOpen={bookingsOpen} />
       {bookingsOpen ? <BookingContact /> : <NewsletterSignUp />}
       <Footer />
     </div>

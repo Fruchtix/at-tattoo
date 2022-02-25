@@ -13,7 +13,7 @@ export default function About() {
         <h2 className="font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-wider">About me</h2>
 
         <p className="text-gray my-5 text-lg">
-          Willkommen auf meiner Website. Ich bin Amelie, auch bekannt als Amy und habe schon als
+          Willkommen auf meiner Website. Ich bin Amelie, auch bekannt als Amy und habe es schon als
           Kind geliebt zu zeichnen. Meine Kreativität kann ich jetzt nicht nur in meinem
           Kommunikationsdesign Studium, sondern auch in meinem Job als Tätowiererin ausleben. Schon
           mit 17 habe ich meine eigene Tattoo Maschine besessen und habe jetzt bereits seit 2 Jahren

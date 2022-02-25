@@ -18,6 +18,8 @@ export default function NewsletterModal({ closeModal }) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    setSendingStatus(SendingStatus.sending);
+
     addUserToNewsletter({ name, email })
       .then(() => {
         setSendingStatus(SendingStatus.success);

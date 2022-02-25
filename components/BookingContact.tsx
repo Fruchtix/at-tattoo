@@ -140,7 +140,7 @@ export default function BookingContact() {
         {/* Basic Information section */}
         <div className="bg-gray-light p-4 rounded-lg">
           <h3 className="font-semibold">Basic Information</h3>
-          <p className="text-gray">Füller das loreum skdfjal dfaldjfa sldfj acon nldkaödakd.</p>
+          <p className="text-gray">Trage deinen Namen, dein Alter und deine E-Mail ein.</p>
 
           <div className="md:flex">
             <input
@@ -206,7 +206,7 @@ export default function BookingContact() {
         {/* Tattoo descripiton section */}
         <div className="bg-gray-light mt-4 p-4 rounded-lg">
           <h3 className="font-semibold">Wie soll dein Tattoo aussehen?</h3>
-          <p className="text-gray">Beschreibe bitte ausführlich was du haben haben willst</p>
+          <p className="text-gray">Beschreibe deine Tattoo Idee</p>
 
           <textarea
             id="tattoo-description"
@@ -214,7 +214,7 @@ export default function BookingContact() {
             rows={8}
             value={tattooDescription}
             onChange={e => setTattooDescription(e.target.value)}
-            placeholder="hier könntest du sowas schreiben wie “lorum ipsum dolurum ist the ksilled and then zu gucken bei the game that is zum beispiel etwas aber then for the door will be addressed”..."
+            placeholder="Du kannst mir hier gerne ausführlich dein Traummotiv schildern..."
             className="w-full"
             required
           />
@@ -301,7 +301,7 @@ export default function BookingContact() {
                 type="text"
                 name="people-count"
                 id="people-count"
-                placeholder="Folgende Personen sollen tatowieert werdern...."
+                placeholder="Folgende Personen sollen tättowiert werden...."
                 className="w-auto flex-1 mt-0"
               />
             </label>
