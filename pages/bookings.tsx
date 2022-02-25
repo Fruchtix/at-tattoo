@@ -5,12 +5,26 @@ import BookingContact from '../components/BookingContact';
 import NewsletterSignUp from '../components/NewsletterSignUp';
 import bookingsJson from '../fixtures/bookings.json';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
-export default function bookings() {
+export default function Bookings() {
   const currentDate = new Date();
   const openingDate = new Date(bookingsJson.open);
   const closingDate = new Date(bookingsJson.close);
   const bookingsOpen = currentDate > openingDate && currentDate < closingDate;
+
+  useEffect(() => {
+    applyScrollMarginToAnchors();
+  }, []);
+
+  function applyScrollMarginToAnchors() {
+    const anchors = document.querySelectorAll<HTMLElement>('[data-anchor-link]');
+    const headerHeight = document.getElementById('header');
+
+    anchors.forEach(anchor => {
+      anchor.style.scrollMarginTop = `${headerHeight.offsetHeight + 50}px`;
+    });
+  }
 
   return (
     <div>

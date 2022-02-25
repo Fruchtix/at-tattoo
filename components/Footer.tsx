@@ -18,7 +18,7 @@ export default function Footer() {
               <br />
             </p>
             <p className="leading-8 mt-8 text-black-secondary text-lg">
-              kontakt@at-tattoos.com
+              kontakt@at-tattoo.com
               <br />
               <br />
             </p>

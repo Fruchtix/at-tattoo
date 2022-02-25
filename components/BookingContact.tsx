@@ -1,12 +1,21 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { postBookingRequest } from '../lib/firebase';
 
 enum ErrorMessages {
   Email = 'Fehler: Deine Emails stimmen nicht überein.',
   Age = 'Fehler: Tut mir leid, du musst leider mindestens 18 sein.',
+  FileSize = 'Fehler: Deine hochgeladenen Bilder dürfen leider maximal 10 MB groß sein.',
+}
+
+enum SendingStatus {
+  notSend,
+  sending,
+  success,
+  failed,
 }
 
 export default function BookingContact() {
+  const [sendingStatus, setSendingStatus] = useState(SendingStatus.notSend);
   const [errorMessage, setErrorMessage] = useState('');
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
@@ -23,38 +32,25 @@ export default function BookingContact() {
   const [preferedTime, setPreferedTime] = useState('');
   const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false);
 
+  const container = useRef(null);
+
   async function handleSubmit(e) {
     e.preventDefault();
 
     let upLoadedFilesFormatted = [];
 
-    for (let i = 0; i < upLoadedFiles.length; i++) {
-      const fileName = upLoadedFiles[i].name;
+    let fileSizeTotal = 0;
 
+    for (let i = 0; i < upLoadedFiles.length; i++) {
       upLoadedFilesFormatted.push({
         content: await toBase64(upLoadedFiles[i]),
-        filename: 'Reference_' + i + fileName.substring(fileName.lastIndexOf('.')),
+        filename: upLoadedFiles[i].name,
         type: upLoadedFiles[i].type,
         disposition: 'attachment',
       });
-    }
 
-    console.log(upLoadedFilesFormatted);
-    console.log('submit');
-    console.log(name);
-    console.log(surname);
-    console.log(email);
-    console.log(confirmedEmail);
-    console.log(age);
-    console.log(tattooDescription);
-    console.log(tattooPosition);
-    console.log(tattooSize);
-    console.log(upLoadedFiles);
-    console.log(peopleCount);
-    console.log(peopleCountTxt);
-    console.log(alreadyCustomer);
-    console.log(subscribeToNewsletter);
-    console.log(preferedTime);
+      fileSizeTotal = fileSizeTotal + upLoadedFiles[i].size;
+    }
 
     if (email !== confirmedEmail) {
       setErrorMessage(ErrorMessages.Email);
@@ -65,6 +61,15 @@ export default function BookingContact() {
       setErrorMessage(ErrorMessages.Age);
       return;
     }
+
+    if (fileSizeTotal >= 10000000) {
+      setErrorMessage(ErrorMessages.FileSize);
+      return;
+    }
+
+    container.current.scrollIntoView();
+
+    setSendingStatus(SendingStatus.sending);
 
     postBookingRequest({
       name,
@@ -80,20 +85,57 @@ export default function BookingContact() {
       preferedTime,
       subscribeToNewsletter,
       upLoadedFilesFormatted,
-    });
+    })
+      .then(result => {
+        console.log('success');
+        console.log(result);
+        setSendingStatus(SendingStatus.success);
+      })
+      .catch(e => {
+        console.log('failure');
+        console.log(e);
+        setSendingStatus(SendingStatus.failed);
+      });
   }
 
   function toBase64(file) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
+      reader.onloadend = () => {
+        resolve(String(reader.result).replace('data:', '').replace(/^.+,/, ''));
+      };
       reader.onerror = error => reject(error);
     });
   }
 
+  if (sendingStatus === SendingStatus.sending) {
+    return (
+      <div className="px-5 mt-6 md:mt-20 md:max-w-screen-2xl md:mx-10 2xl:mx-auto">
+        <div className="bg-gray-light p-4 rounded-lg">
+          Deine Anfrage wird geschickt, hab noch einen Moment Geduld...
+        </div>
+      </div>
+    );
+  }
+
+  if (sendingStatus === SendingStatus.success) {
+    return (
+      <div className="px-5 mt-6 md:mt-20 md:max-w-screen-2xl md:mx-10 2xl:mx-auto">
+        <div className="bg-gray-light p-4 rounded-lg">
+          Super, das hat geklappt. Danke für deine Anfrage! Ich melde mich schnellstmöglich bei dir.
+          Es kann jedoch sein, dass es ein paar Tage dauert bis du eine Antwort kriegst. :)
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="px-5 mt-6 md:mt-20 md:max-w-screen-2xl md:mx-10 2xl:mx-auto">
+    <div
+      ref={container}
+      className="px-5 mt-6 md:mt-20 md:max-w-screen-2xl md:mx-10 2xl:mx-auto"
+      data-anchor-link
+    >
       <form onSubmit={handleSubmit}>
         {/* Basic Information section */}
         <div className="bg-gray-light p-4 rounded-lg">
@@ -214,11 +256,7 @@ export default function BookingContact() {
           <p className="text-gray">Füge bitte mindestens ein Referenzbild hinzu.</p>
 
           <input
-            onChange={e => {
-              setUpLoadedFiles(e.target.files);
-              console.log(e.target.files);
-              console.log(typeof e.target.files);
-            }}
+            onChange={e => setUpLoadedFiles(e.target.files)}
             type="file"
             name="tattoo-reference"
             id="tattoo-reference"

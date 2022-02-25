@@ -1,11 +1,54 @@
 import { useState } from 'react';
+import { addUserToNewsletter } from '../lib/firebase';
+
+enum SendingStatus {
+  notSend,
+  sending,
+  success,
+  failed,
+}
 
 export default function NewsletterSignUp() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [sendingStatus, setSendingStatus] = useState(SendingStatus.notSend);
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    setSendingStatus(SendingStatus.sending);
+
+    addUserToNewsletter({ name, email })
+      .then(() => {
+        setSendingStatus(SendingStatus.success);
+      })
+      .catch(() => {
+        console.log('error');
+      });
+  }
+
+  if (sendingStatus === SendingStatus.sending) {
+    return (
+      <div className="px-5 mt-6 md:mt-20 md:max-w-screen-2xl md:mx-10 2xl:mx-auto">
+        <div className="bg-gray-light p-4 rounded-lg">
+          <h3 className="font-semibold">Lädt...</h3>
+          <p className="text-gray">
+            Einen Moment noch, du wirst gerade zum Newsletter hinzugefügt.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (sendingStatus === SendingStatus.success) {
+    return (
+      <div className="px-5 mt-6 md:mt-20 md:max-w-screen-2xl md:mx-10 2xl:mx-auto">
+        <div className="bg-gray-light p-4 rounded-lg">
+          <h3 className="font-semibold">Cool, das hat geklappt</h3>
+          <p className="text-gray">Dank dir! Sobald es Neuigkeiten gibt, melde ich mich.</p>
+        </div>
+      </div>
+    );
   }
 
   return (

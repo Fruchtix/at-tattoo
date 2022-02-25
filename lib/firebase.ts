@@ -19,9 +19,11 @@ const functions = getFunctions(app);
 export function postBookingRequest(data) {
   const sendBookingRequest = httpsCallable(functions, 'sendBookingRequest');
 
-  sendBookingRequest(data).then(result => {
-    const data: any = result.data;
+  return sendBookingRequest(data);
+}
 
-    console.log(data);
-  });
+export function addUserToNewsletter(data) {
+  const addToNewsletter = httpsCallable(functions, 'addToNewsletter');
+
+  return addToNewsletter(data);
 }
