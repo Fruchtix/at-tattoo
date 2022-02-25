@@ -237,7 +237,7 @@ export default function BookingContact() {
 
         {/* Tattoo size section */}
         <div className="bg-gray-light mt-4 p-4 rounded-lg">
-          <h3 className="font-semibold">Wie größ soll dein Tattoo ungefähr sein?</h3>
+          <h3 className="font-semibold">Wie groß soll dein Tattoo ungefähr sein?</h3>
 
           <input
             value={tattooSize}
@@ -269,7 +269,7 @@ export default function BookingContact() {
         {/* Tattoo people count section */}
         <div className="bg-gray-light mt-4 p-4 rounded-lg">
           <h3 className="font-semibold">
-            Sollen mehrere Personen in einer Sitzung tatowiert werden?
+            Sollen mehrere Personen in einer Sitzung tättowiert werden?
           </h3>
           <p className="text-gray">maximum 3 Personen</p>
 
@@ -378,7 +378,7 @@ export default function BookingContact() {
               id="subscribe"
               className="w-auto mr-4"
             />
-            Ich möchte den Newsletter abonieren
+            Ich möchte den Newsletter abonnieren
           </label>
         </div>
 
