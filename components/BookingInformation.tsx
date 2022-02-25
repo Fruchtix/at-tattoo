@@ -26,7 +26,7 @@ export default function BookingInformation() {
           width={1435}
           height={1321}
           layout="responsive"
-          placeholder="blur"
+          priority={true}
         />
       </div>
     </div>
