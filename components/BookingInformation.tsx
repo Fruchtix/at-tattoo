@@ -20,7 +20,14 @@ export default function BookingInformation() {
       </div>
 
       <div className="translate-x-1/2 md:translate-x-0 md:w-screen/2 md:mt-16">
-        <Image src={bookingsImage} alt="" width={1435} height={1321} layout="responsive" />
+        <Image
+          src={bookingsImage}
+          alt=""
+          width={1435}
+          height={1321}
+          layout="responsive"
+          placeholder="blur"
+        />
       </div>
     </div>
   );

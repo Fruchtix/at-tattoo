@@ -30,6 +30,7 @@ export default function Hero() {
           height={436}
           layout="responsive"
           className="object-contain -z-1 md:z-0"
+          priority={true}
         />
       </div>
 

@@ -23,10 +23,24 @@ export default function ShopPreview() {
 
           <div className="flex-grow flex pb-5 md:pb-10">
             <div className="w-full -mr-12 z-10 self-end">
-              <Image src={shopImageTwo} alt="" width={2633} height={3942} layout="responsive" />
+              <Image
+                src={shopImageTwo}
+                alt=""
+                width={2633}
+                height={3942}
+                layout="responsive"
+                placeholder="blur"
+              />
             </div>
             <div className="w-full self-start pb-16 lg:pb-28">
-              <Image src={shopImageThree} alt="" width={3999} height={6000} layout="responsive" />
+              <Image
+                src={shopImageThree}
+                alt=""
+                width={3999}
+                height={6000}
+                layout="responsive"
+                placeholder="blur"
+              />
             </div>
           </div>
           <Link href="/shop" passHref>
@@ -42,7 +56,14 @@ export default function ShopPreview() {
 
         <div className="mt-18 md:mt-0 md:w-3/12">
           <div className="relative">
-            <Image src={shopImageOne} width={3072} height={4606} alt="" layout="responsive" />
+            <Image
+              src={shopImageOne}
+              width={3072}
+              height={4606}
+              alt=""
+              layout="responsive"
+              placeholder="blur"
+            />
           </div>
           <p className="relative pl-2 pr-28 text-lg font-medium md:pr-16 xl:pr-32 mt-10 text-black-secondary lg:text-lg before:bg-black before:w-px before:-top-0.5 before:left-0 before:-bottom-0.5 before:absolute">
             You can get all my tattoo designs also printed on tshirts and hoodys.

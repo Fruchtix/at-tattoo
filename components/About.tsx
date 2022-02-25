@@ -23,7 +23,14 @@ export default function About() {
       </div>
 
       <div className="md:flex-grow md:w-screen/2">
-        <Image src={studio} alt="amy tattoos studio" width={360} height={202} layout="responsive" />
+        <Image
+          src={studio}
+          alt="amy tattoos studio"
+          width={360}
+          height={202}
+          layout="responsive"
+          placeholder="blur"
+        />
       </div>
     </section>
   );

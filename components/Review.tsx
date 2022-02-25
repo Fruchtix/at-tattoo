@@ -4,7 +4,7 @@ export default function Review({ image, profileImage, name, text }) {
   return (
     <div className="mt-6">
       <div className="rounded-lg overflow-hidden">
-        <Image src={image} alt="" width={144} height={180} layout="responsive" />
+        <Image src={image} alt="" width={144} height={180} layout="responsive" placeholder="blur" />
       </div>
 
       <div className="flex mt-4">
@@ -14,6 +14,7 @@ export default function Review({ image, profileImage, name, text }) {
             alt=""
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
             objectPosition="top center"
           />
         </div>
