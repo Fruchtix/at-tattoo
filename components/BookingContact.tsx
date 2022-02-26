@@ -30,6 +30,7 @@ export default function BookingContact() {
   const [peopleCountTxt, setPeopleCountTxt] = useState('');
   const [alreadyCustomer, setAlreadyCustomer] = useState<boolean>();
   const [preferedTime, setPreferedTime] = useState('');
+  const [instaName, setInstaName] = useState('');
   const [subscribeToNewsletter, setSubscribeToNewsletter] = useState(false);
 
   const container = useRef(null);
@@ -85,6 +86,7 @@ export default function BookingContact() {
       preferedTime,
       subscribeToNewsletter,
       upLoadedFilesFormatted,
+      instaName,
     })
       .then(result => {
         console.log('success');
@@ -199,7 +201,14 @@ export default function BookingContact() {
               placeholder="Alter"
               required
             />
-            <div className="w-full my-2 p-2 rounded-lg border border-transparent hidden md:block"></div>
+            <input
+              value={instaName}
+              onChange={e => setInstaName(e.target.value)}
+              type="text"
+              name="insta-name"
+              id="insta-name"
+              placeholder="Instagram Name (optional)"
+            />
           </div>
         </div>
 
