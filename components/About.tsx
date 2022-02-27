@@ -16,9 +16,9 @@ export default function About() {
           Willkommen auf meiner Website. Ich bin Amelie, auch bekannt als Amy und habe es schon als
           Kind geliebt zu zeichnen. Meine Kreativität kann ich jetzt nicht nur in meinem
           Kommunikationsdesign Studium, sondern auch in meinem Job als Tätowiererin ausleben. Schon
-          mit 17 habe ich meine eigene Tattoo Maschine besessen und habe jetzt bereits seit 2 Jahren
-          mein Hobby zum Beruf gemacht. Spezialisiert habe ich mich auf dünne Linien und dezente
-          Schattierungen, wobei ich am liebsten florale, abstrakte oder tierische Motive umsetze.
+          mit 17 habe ich meine eigene Tattoo Maschine besessen und konnte schließlich mein Hobby
+          zum Beruf machen. Spezialisiert habe ich mich auf dünne Linien und dezente Schattierungen,
+          wobei ich am liebsten florale, abstrakte oder tierische Motive umsetze.
         </p>
       </div>
 
