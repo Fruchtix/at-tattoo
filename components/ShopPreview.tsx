@@ -43,11 +43,11 @@ export default function ShopPreview() {
               />
             </div>
           </div>
-          <Link href="/shop" passHref>
+          <Link href="https://shop.at-tattoo.com/" passHref>
             <div className="absolute bottom-0 cursor-pointer right-0 py-3 px-10 bg-white border-black border-2 z-20 sm:py-6 sm:px-32 md:bottom-5 transition-all before:absolute before:bg-black before:bottom-0 before:left-0 before:right-0 before:top-full before:-z-1 before:transition-all hover:before:top-0 hover:text-white">
               <a>
                 <span className="text-xl font-medium sm:font-semibold sm:text-2xl">
-                  Coming soon
+                  Explore now
                 </span>
               </a>
             </div>

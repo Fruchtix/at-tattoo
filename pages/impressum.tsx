@@ -24,9 +24,9 @@ export default function Impresum() {
         <p>
           Amelie G&ouml;bel
           <br />
-          Wilhelmstra&szlig;e 26
+          Ludwigstr. 100
           <br />
-          42853 Remscheid
+          42105 Wuppertal
         </p>
 
         <h2 className="font-semibold text-xl tracking-wider mt-4">Kontakt</h2>

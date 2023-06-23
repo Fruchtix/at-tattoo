@@ -12,9 +12,9 @@ export default function Footer() {
             <p className="leading-8 text-black-secondary text-lg">
               Amy Tattoos
               <br />
-              Wilhelmstr. 26
+              Ludwigstr. 100
               <br />
-              42853 Remscheid
+              42105 Wuppertal
               <br />
             </p>
             <p className="leading-8 mt-8 text-black-secondary text-lg">
