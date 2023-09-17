@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
           <div className="w-full md:w-8/12 my-8 md:my-0 relative">
             <iframe
-              src="https://maps.google.com/maps?width=100%25&amp;height=100%&amp;hl=en&amp;q=Ludwigstr.%20100+(at-tattoo)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2496.6598329971316!2d7.135879276605442!3d51.26217227175846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8d7be3ff39f7b%3A0x49c1d942081904b1!2samy%20tattoos!5e0!3m2!1sen!2sde!4v1694979770863!5m2!1sen!2sde"
               loading="lazy"
               width="100%"
               height="100%"
